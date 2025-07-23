@@ -67,7 +67,7 @@ const NotFoundPage = () => {
 
             {/* Helpful Links */}
             <div className="mt-8 pt-8 border-t border-white/20">
-              <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
+              <p className="text-sm text-gray-700 dark:text-gray-200 mb-4 font-medium">
                 Or try one of these popular pages:
               </p>
               <div className="flex flex-wrap gap-2 justify-center">

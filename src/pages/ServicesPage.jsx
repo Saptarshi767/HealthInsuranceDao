@@ -125,7 +125,7 @@ const ServicesPage = () => {
                     </div>
                     <ul className="space-y-1">
                       {service.features.slice(0, 2).map((feature, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-600 dark:text-gray-300">
+                        <li key={idx} className="flex items-center text-sm text-gray-700 dark:text-gray-200 font-medium">
                           <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                           {feature}
                         </li>
@@ -157,7 +157,7 @@ const ServicesPage = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800 dark:text-gray-200">
               Need a Custom Plan?
             </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-700 dark:text-gray-200 mb-8 max-w-2xl mx-auto font-medium">
               Our team can work with you to create a personalized healthcare plan that fits 
               your specific needs and budget.
             </p>
@@ -196,7 +196,7 @@ const ServicesPage = () => {
             
             <ul className="space-y-3 mb-8">
               {selectedService.features.map((feature, idx) => (
-                <li key={idx} className="flex items-center text-gray-600 dark:text-gray-300">
+                <li key={idx} className="flex items-center text-gray-700 dark:text-gray-200 font-medium">
                   <Check className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
                   {feature}
                 </li>

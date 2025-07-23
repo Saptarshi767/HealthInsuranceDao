@@ -98,7 +98,7 @@ const HomePage = () => {
                 Health Insurance
               </span>
               <br />
-              <span className="text-gray-800 dark:text-gray-200">
+              <span className="text-gray-900 dark:text-gray-100 font-bold">
                 Reimagined
               </span>
             </h1>
@@ -108,7 +108,7 @@ const HomePage = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed"
+            className="text-xl md:text-2xl text-gray-700 dark:text-gray-200 mb-8 leading-relaxed font-medium"
           >
             Join the future of healthcare with our decentralized insurance platform.
             <br />
@@ -149,7 +149,7 @@ const HomePage = () => {
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800 dark:text-gray-200">
               Why Choose HealthDAO?
             </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 dark:text-gray-200 max-w-3xl mx-auto font-medium">
               Experience the next generation of health insurance with cutting-edge technology
               and community-first principles.
             </p>
@@ -186,7 +186,7 @@ const HomePage = () => {
                     <h3 className="text-2xl font-bold mb-4 text-gray-800 dark:text-gray-200">
                       {feature.title}
                     </h3>
-                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                    <p className="text-gray-700 dark:text-gray-200 leading-relaxed font-medium">
                       {feature.description}
                     </p>
                   </GlassCard>
@@ -210,7 +210,7 @@ const HomePage = () => {
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800 dark:text-gray-200">
                 Ready to Transform Healthcare?
               </h2>
-              <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
+              <p className="text-xl text-gray-700 dark:text-gray-200 mb-8 font-medium">
                 Join thousands of members who are already experiencing the future of health insurance.
               </p>
               <Link to="/contact">

@@ -78,7 +78,7 @@ const AboutPage = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800 dark:text-gray-200">
               Our Mission
             </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-4xl mx-auto">
+            <p className="text-lg text-gray-700 dark:text-gray-200 leading-relaxed max-w-4xl mx-auto font-medium">
               To democratize healthcare insurance by leveraging blockchain technology to create 
               a transparent, efficient, and community-governed platform. We believe healthcare 
               should be accessible, affordable, and driven by the collective wisdom of our members.
@@ -115,7 +115,7 @@ const AboutPage = () => {
                     <h3 className="text-xl font-bold mb-3 text-gray-800 dark:text-gray-200">
                       {value.title}
                     </h3>
-                    <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                    <p className="text-gray-700 dark:text-gray-200 text-sm leading-relaxed font-medium">
                       {value.description}
                     </p>
                   </GlassCard>

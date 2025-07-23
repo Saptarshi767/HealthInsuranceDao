@@ -180,7 +180,7 @@ const DashboardPage = () => {
                   <div className="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-1">
                     {stat.value}
                   </div>
-                  <div className="text-sm text-gray-600 dark:text-gray-300">
+                  <div className="text-sm text-gray-700 dark:text-gray-200 font-medium">
                     {stat.title}
                   </div>
                 </GlassCard>
@@ -224,10 +224,10 @@ const DashboardPage = () => {
                           {claim.status}
                         </span>
                       </div>
-                      <div className="text-sm text-gray-600 dark:text-gray-300">
+                      <div className="text-sm text-gray-700 dark:text-gray-200 font-medium">
                         {claim.procedure} • {claim.patient}
                       </div>
-                      <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                      <div className="text-xs text-gray-600 dark:text-gray-300 mt-1 font-medium">
                         {claim.date}
                       </div>
                     </div>
@@ -257,10 +257,10 @@ const DashboardPage = () => {
               <div className="h-64 flex items-center justify-center bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-xl border border-white/10">
                 <div className="text-center">
                   <BarChart3 className="w-16 h-16 text-purple-500/50 mx-auto mb-4" />
-                  <p className="text-gray-600 dark:text-gray-300">
+                  <p className="text-gray-700 dark:text-gray-200 font-medium">
                     Chart visualization would go here
                   </p>
-                  <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">
+                  <p className="text-sm text-gray-600 dark:text-gray-300 mt-2 font-medium">
                     Showing treasury growth over time
                   </p>
                 </div>

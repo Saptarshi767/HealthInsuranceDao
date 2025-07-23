@@ -55,13 +55,13 @@ const FormField = ({
               ? '#ef4444' 
               : isFocused 
                 ? '#8b5cf6' 
-                : '#6b7280'
+                : isDark ? '#d1d5db' : '#374151'
           }}
           transition={{ duration: 0.2 }}
           className={`
             absolute left-4 top-3 pointer-events-none
             font-medium origin-left
-            ${isFocused || hasValue ? 'dark:text-gray-300' : 'dark:text-gray-400'}
+            ${isFocused || hasValue ? 'dark:text-gray-200' : 'dark:text-gray-300'}
           `}
         >
           {label} {required && '*'}

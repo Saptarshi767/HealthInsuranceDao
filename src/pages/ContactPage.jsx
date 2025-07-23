@@ -267,10 +267,10 @@ const ContactPage = () => {
                         <h3 className="text-lg font-bold mb-1 text-gray-800 dark:text-gray-200">
                           {info.title}
                         </h3>
-                        <p className="text-purple-600 dark:text-purple-400 font-medium mb-1">
+                        <p className="text-purple-600 dark:text-purple-300 font-semibold mb-1">
                           {info.content}
                         </p>
-                        <p className="text-sm text-gray-600 dark:text-gray-300">
+                        <p className="text-sm text-gray-700 dark:text-gray-200 font-medium">
                           {info.description}
                         </p>
                       </div>
@@ -297,19 +297,19 @@ const ContactPage = () => {
                     </h3>
                     <div className="space-y-1 text-sm">
                       <div className="flex justify-between">
-                        <span className="text-gray-600 dark:text-gray-300">Monday - Friday:</span>
-                        <span className="text-gray-800 dark:text-gray-200 font-medium">9:00 AM - 6:00 PM</span>
+                        <span className="text-gray-700 dark:text-gray-200 font-medium">Monday - Friday:</span>
+                        <span className="text-gray-900 dark:text-gray-100 font-semibold">9:00 AM - 6:00 PM</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-gray-600 dark:text-gray-300">Saturday:</span>
-                        <span className="text-gray-800 dark:text-gray-200 font-medium">10:00 AM - 4:00 PM</span>
+                        <span className="text-gray-700 dark:text-gray-200 font-medium">Saturday:</span>
+                        <span className="text-gray-900 dark:text-gray-100 font-semibold">10:00 AM - 4:00 PM</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-gray-600 dark:text-gray-300">Sunday:</span>
-                        <span className="text-gray-800 dark:text-gray-200 font-medium">Closed</span>
+                        <span className="text-gray-700 dark:text-gray-200 font-medium">Sunday:</span>
+                        <span className="text-gray-900 dark:text-gray-100 font-semibold">Closed</span>
                       </div>
                       <div className="pt-2 border-t border-white/20 mt-3">
-                        <span className="text-purple-600 dark:text-purple-400 font-medium">
+                        <span className="text-purple-600 dark:text-purple-300 font-semibold">
                           Emergency Support: 24/7
                         </span>
                       </div>

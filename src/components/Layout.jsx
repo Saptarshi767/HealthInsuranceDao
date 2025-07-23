@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Home, User, Briefcase, Mail, BarChart3, Sun, Moon } from 'lucide-react';
+import { Menu, X, Home, User, Briefcase, Mail, BarChart3, Sun, Moon, Wallet } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import InstallPWA from './InstallPWA';
+import { ConnectWalletButton } from './ConnectWallet';
 
 const Layout = ({ children }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -60,8 +61,8 @@ const Layout = ({ children }) => {
                       to={item.path}
                       className={`flex items-center space-x-2 px-3 py-2 rounded-lg transition-all duration-300 ${
                         isActive
-                          ? 'text-purple-600 dark:text-purple-400'
-                          : 'text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400'
+                          ? 'text-purple-600 dark:text-purple-400 font-semibold'
+                          : 'text-gray-800 dark:text-gray-200 hover:text-purple-600 dark:hover:text-purple-400 font-medium'
                       }`}
                     >
                       <Icon size={18} />
@@ -78,6 +79,9 @@ const Layout = ({ children }) => {
                   </motion.div>
                 );
               })}
+              
+              {/* Connect Wallet Button */}
+              <ConnectWalletButton />
               
               {/* Theme Toggle */}
               <motion.button
@@ -172,8 +176,8 @@ const Layout = ({ children }) => {
                         onClick={() => setIsMenuOpen(false)}
                         className={`flex items-center space-x-3 px-4 py-3 rounded-lg transition-all duration-300 ${
                           isActive
-                            ? 'bg-purple-500/20 text-purple-600 dark:text-purple-400'
-                            : 'text-gray-700 dark:text-gray-300 hover:bg-white/10'
+                            ? 'bg-purple-500/20 text-purple-600 dark:text-purple-400 font-semibold'
+                            : 'text-gray-800 dark:text-gray-200 hover:bg-white/10 font-medium'
                         }`}
                       >
                         <Icon size={20} />
@@ -182,12 +186,23 @@ const Layout = ({ children }) => {
                     </motion.div>
                   );
                 })}
+                
+                {/* Mobile Connect Wallet */}
+                <motion.div
+                  initial={{ x: -20, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  transition={{ delay: 0.15 }}
+                  className="px-4 py-2"
+                >
+                  <ConnectWalletButton />
+                </motion.div>
+                
                 <motion.button
                   initial={{ x: -20, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ delay: 0.2 }}
                   onClick={toggleTheme}
-                  className="flex items-center space-x-3 px-4 py-3 rounded-lg w-full text-left text-gray-700 dark:text-gray-300 hover:bg-white/10"
+                  className="flex items-center space-x-3 px-4 py-3 rounded-lg w-full text-left text-gray-800 dark:text-gray-200 hover:bg-white/10 font-medium"
                 >
                   {isDark ? <Sun size={20} /> : <Moon size={20} />}
                   <span>Toggle Theme</span>
