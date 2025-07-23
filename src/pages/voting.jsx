@@ -1,7 +1,9 @@
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Text, SimpleGrid, VStack } from "@chakra-ui/react";
 import Dropdown from "../components/collapsable";
 import LineChartComponent from "../components/lineChart";
 import VotingStats from "../components/VotingStats";
+import GlassCard from "../components/GlassCard"; // Assuming you have this component
+import "../styles/voting.css";
 
 const claimsData = [
   {
@@ -39,43 +41,50 @@ const claimsData = [
   }
 ];
 
-export default function HomePage() {
+export default function VotingPage() {
   return (
-    <Box display="flex" className="page">
-      <Box flex="1" p={4}>        <Box bg="blue.100" className="p-6 rounded-lg" textAlign="left" marginBottom="3%">
-          <Text textStyle={"title"} color={"white"}>
-            Vote on Claims
-          </Text>
-        </Box>
-        
-        <VotingStats claims={claimsData} />
-        
-        {claimsData.map((claim, index) => (
-          <Box marginTop="2%" key={claim.id}>
-            <Dropdown
-              id={claim.id}
-              name={claim.name}
-              price={claim.price}
-              date={claim.date}
-              patientAddress={claim.patientAddress}
-              hospitalName={claim.hospitalName}
-              recPriceLow={claim.recPriceLow}
-              recPriceHigh={claim.recPriceHigh}
-              votingLink={claim.votingLink}
-            />
-          </Box>
-        ))}
-      </Box>
-      <Box flex="1" p={4}>
-        <Box bg="blue.100" className="p-6 rounded-lg" textAlign="left">
-          <Text textStyle={"title"} color={"white"}>
-            Treasury
-          </Text>
-        </Box>
-        <Box bg="black" className="p-6 rounded-lg" marginTop="5%" height= "50%">
-          <LineChartComponent />
-        </Box>
-      </Box>
+    <Box p={5} className="page-background">
+      <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6}>
+        {/* Left Column */}
+        <VStack spacing={6}>
+          <GlassCard className="glass-card">
+            <Text fontSize="2xl" fontWeight="bold" color="white" mb={4}>
+              Vote on Claims
+            </Text>
+            <VotingStats claims={claimsData} />
+          </GlassCard>
+          
+          <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={6} w="100%">
+            {claimsData.map((claim) => (
+              <GlassCard key={claim.id} w="100%" className="glass-card">
+                <Dropdown
+                  id={claim.id}
+                  name={claim.name}
+                  price={claim.price}
+                  date={claim.date}
+                  patientAddress={claim.patientAddress}
+                  hospitalName={claim.hospitalName}
+                  recPriceLow={claim.recPriceLow}
+                  recPriceHigh={claim.recPriceHigh}
+                  votingLink={claim.votingLink}
+                />
+              </GlassCard>
+            ))}
+          </SimpleGrid>
+        </VStack>
+
+        {/* Right Column */}
+        <VStack spacing={6}>
+          <GlassCard>
+            <Text fontSize="2xl" fontWeight="bold" color="white" mb={4}>
+              Treasury Overview
+            </Text>
+            <Box height="300px">
+              <LineChartComponent />
+            </Box>
+          </GlassCard>
+        </VStack>
+      </SimpleGrid>
     </Box>
   );
 }

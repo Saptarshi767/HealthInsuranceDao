@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Home, User, Briefcase, Mail, BarChart3, Sun, Moon, Wallet } from 'lucide-react';
+import { Menu, X, Home, User, Briefcase, Mail, BarChart3, Sun, Moon, Wallet, Vote } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import InstallPWA from './InstallPWA';
 import { ConnectWalletButton } from './ConnectWallet';
@@ -14,8 +14,9 @@ const Layout = ({ children }) => {
     { path: '/', label: 'Home', icon: Home },
     { path: '/about', label: 'About', icon: User },
     { path: '/services', label: 'Services', icon: Briefcase },
-    { path: '/contact', label: 'Contact', icon: Mail },
+    
     { path: '/dashboard', label: 'Dashboard', icon: BarChart3 },
+    { path: '/voting', label: 'Voting', icon: Vote },
   ];
 
   useEffect(() => {

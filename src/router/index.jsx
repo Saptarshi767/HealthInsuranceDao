@@ -6,6 +6,7 @@ import Login from "../pages/filing";
 import FeedPage from "../pages/feed";
 import VotePage from "../pages/voting";
 import Header from "../components/header";
+import CustomPlanPage from "../pages/CustomPlanPage";
 
 const Router = () => {
 	return (
@@ -53,6 +54,15 @@ const Router = () => {
 						<>
 							<Header title={"Voting"} />
 							<VotePage />
+						</>
+					}
+				/>
+				<Route
+					path="/custom-plan"
+					element={
+						<>
+							<Header title={"Custom Plan"} />
+							<CustomPlanPage />
 						</>
 					}
 				/>

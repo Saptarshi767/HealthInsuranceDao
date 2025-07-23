@@ -21,8 +21,8 @@ const GlassCard = ({
       whileHover={hover ? { scale: 1.02, y: -5 } : {}}
       whileTap={{ scale: 0.98 }}
       className={`
-        backdrop-blur-xl bg-white/10 dark:bg-black/10 
-        border border-white/20 dark:border-white/10
+        backdrop-blur-5xl bg-white/30 dark:bg-black/30
+        border border-white/40 dark:border-white/30
         rounded-2xl shadow-xl
         transition-all duration-300
         ${hover ? 'hover:bg-white/20 dark:hover:bg-black/20' : ''}

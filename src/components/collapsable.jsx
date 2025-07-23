@@ -21,7 +21,7 @@ function CustomDropdown({
   const voteData = getClaimVotes(claimId);
 
   const toggleDropdown = () => {
-    setIsOpen(!isOpen);
+    setIsOpen((prev) => !prev);
   };
 
   const handleVote = async (approve) => {
@@ -79,7 +79,7 @@ function CustomDropdown({
   };
   return (
     <Box>
-      <Button onClick={toggleDropdown} variant="secondary" paddingRight="5%">
+      <Button onClick={toggleDropdown}>
         <Flex justify="space-between" align="center" width="100%">
           <HStack spacing={4} flex={1}>
             <Text color="white" fontWeight="bold">{name}</Text>

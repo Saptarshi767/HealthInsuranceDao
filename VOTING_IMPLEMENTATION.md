@@ -7,7 +7,7 @@ Your Health Insurance DAO now has a fully functional voting system with comprehe
 ## ✨ Features Implemented
 
 ### 🗳️ Core Voting Features
-- **Voting Button in Navbar** - Prominent "Vote on Claims" button with notification badge
+- **Voting Button in Navbar** - "Voting" link with an icon in the main navigation bar.
 - **Approve/Reject Buttons** - Interactive voting buttons for each claim
 - **Real-time Vote Counting** - Live tracking of approve vs reject votes
 - **Vote Status Badges** - Visual indicators (Pending, Approved, Rejected, Paid)
@@ -55,7 +55,7 @@ hardhat.config.js                   - Hardhat configuration
 ```
 src/components/collapsable.jsx      - Added voting buttons and status
 src/pages/voting.jsx                - Enhanced with statistics dashboard
-src/components/header.jsx           - Added prominent voting button with notification badge
+src/components/Layout.jsx           - Added "Voting" link to the main navigation bar
 ```
 
 ## 🎯 How to Use

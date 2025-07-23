@@ -7,6 +7,11 @@ import Modal from '../components/Modal';
 
 const ServicesPage = () => {
   const [selectedService, setSelectedService] = useState(null);
+  const [isPurchased, setIsPurchased] = useState(false);
+
+  const handlePurchase = () => {
+    setIsPurchased(true);
+  };
 
   const services = [
     {
@@ -161,7 +166,7 @@ const ServicesPage = () => {
               Our team can work with you to create a personalized healthcare plan that fits 
               your specific needs and budget.
             </p>
-            <Button size="lg">
+            <Button size="lg" as="a" href="/custom-plan">
               Contact Our Specialists
             </Button>
           </GlassCard>
@@ -204,13 +209,18 @@ const ServicesPage = () => {
             </ul>
             
             <div className="flex gap-4">
-              <Button className="flex-1">
+              <Button className="flex-1" onClick={handlePurchase}>
                 Get Started
               </Button>
               <Button variant="secondary" className="flex-1">
                 Compare Plans
               </Button>
             </div>
+          </div>
+        )}
+        {isPurchased && (
+          <div className="mt-4 text-green-500 font-bold">
+            Congratulations! You have successfully purchased the insurance plan.
           </div>
         )}
       </Modal>
