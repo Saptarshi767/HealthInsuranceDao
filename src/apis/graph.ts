@@ -57,6 +57,12 @@ export async function getAllPolicies(id) {
     // make the request with the string id
     const result = await client.query(query, {}).toPromise();
 
+    // Check if result.data exists before accessing policyCreateds
+    if (!result.data) {
+      console.error("GraphQL query returned no data:", result.error);
+      return null;
+    }
+
     let all = result.data.policyCreateds;
 
     return all;
