@@ -4,6 +4,9 @@ export default {
 	theme: {
 		extend: {
 			colors: {
+				navy: {
+					900: '#1e3a8a', // Navy blue color
+				},
 				border: "hsl(var(--border))",
 				input: "hsl(var(--input))",
 				ring: "hsl(var(--ring))",

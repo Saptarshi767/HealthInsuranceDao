@@ -123,7 +123,7 @@ const HomePage = () => {
           >
             <Link to="/dashboard">
               <Button size="lg" className="group">
-                Get Started
+                <span className="text-navy-900">Get Started</span>
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
@@ -215,7 +215,7 @@ const HomePage = () => {
               </p>
               <Link to="/contact">
                 <Button size="lg" className="group">
-                  Start Your Journey
+                  <span className="text-navy-900">Start Your Journey</span>
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
