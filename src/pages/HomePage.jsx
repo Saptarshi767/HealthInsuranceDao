@@ -209,13 +209,12 @@ const HomePage = () => {
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800 dark:text-gray-200">
                 Ready to Transform Healthcare?
-              </h2>
-              <p className="text-xl text-gray-700 dark:text-gray-200 mb-8 font-medium">
+              </h2>              <p className="text-xl text-gray-700 dark:text-gray-200 mb-8 font-medium">
                 Join thousands of members who are already experiencing the future of health insurance.
               </p>
-              <Link to="/contact">
+              <Link to="/voting">
                 <Button size="lg" className="group">
-                  <span className="text-navy-900">Start Your Journey</span>
+                  <span className="text-navy-900">Vote on Claims</span>
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
