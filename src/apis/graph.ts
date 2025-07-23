@@ -41,7 +41,7 @@ export async function getAllClaims(id) {
 }
 
 export async function getAllPolicies(id) {
-  const query = `query () {
+  const query = `query {
   policyCreateds {
     blockNumber
     blockTimestamp

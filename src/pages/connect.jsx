@@ -66,6 +66,10 @@ export default function ConnectPage() {
 
   async function load() {
     let a = await getAllPolicies();
+    if (!a) {
+      console.error("Failed to fetch policies");
+      return;
+    }
     let edited = [];
     for (let i = 0; i < a.length; i++) {
       console.log(a[i]);
